@@ -1,0 +1,42 @@
+.content_wrap {
+    padding: 1.5vw 1.5vw 1.5vw 2vw;
+    background-color: rgb(69, 132, 132);
+    margin-left: 5vw;
+    display: flex;
+}
+
+.hub_line {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile_pic {
+    width: 15vw;
+    height: 15vw;
+    background-color: aliceblue;
+    padding: 1.5vw;
+    margin-right: 3vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+}
+
+.profile_name {
+    max-width: 18vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.username {
+    color: aliceblue;
+    margin-right: 1vw;
+    padding: 0.5vw 1vw;
+    background-color: rgb(39, 75, 75);
+    border-radius: 0.5vw;
+}
+
+.user_id {
+    color: rgb(39, 75, 75);
+    padding: 0.5vw 1vw;
+    background-color: aliceblue;
+    border-radius: 0.5vw;
+}

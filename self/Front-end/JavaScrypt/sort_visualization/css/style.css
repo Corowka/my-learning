@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article>*+* {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* General styly */
+
+body {
+    color: white;
+    background-color: rgb(36, 36, 36);
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+input {
+    color: white;
+}
+
+
+/* Header Satrt */
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: rgb(25, 25, 25);
+}
+
+.header-wrap {
+    height: 76px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.sort_list {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort_list button {
+    background: none;
+    color: white;
+}
+
+.sort {
+    border-radius: 7px;
+    background-color: rgb(25, 25, 25, 0);
+    font-size: 20px;
+    list-style-type: none;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.sort:hover {
+    background-color: rgb(250, 56, 56, 0.7);
+}
+
+.start_page {
+    padding: 5px 30px;
+    border: 2px solid rgb(250, 56, 56, 0.7);
+    border-radius: 7px;
+    box-shadow: 0 0 20px 2px rgb(250, 56, 56, 0.7);
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.start_page:hover {
+    box-shadow: 0 0 30px 5px rgba(250, 56, 56, 1);
+    border: 2px solid rgb(250, 56, 56, 1);
+}
+
+
+/* Header End */
+
+
+/* Settings Start */
+
+.settings-wrap {
+    height: 450px;
+    width: 100%;
+    padding: 106px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settings-item {
+    width: 48%;
+}
+
+.settings-part {
+    height: 100%;
+    padding: 30px 40px 50px;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0 4px 30px 5px rgba(250, 56, 56, 0.3);
+    border: 3px solid rgba(255, 15, 15, 0.4);
+    border-radius: 14px;
+}
+
+.settings__form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-item {
+    padding: 10px 20px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 7px;
+}
+
+.form-item-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+.form-item-1 h2 {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.form-item-1 input {
+    text-align: center;
+    width: 40px;
+}
+
+.submit-wrap input {
+    padding: 0 60px;
+    border: 2px solid rgb(250, 56, 56, 0.7);
+    border-radius: 7px;
+    font-size: 30px;
+    background-color: rgb(36, 36, 36);
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.submit-wrap input:hover {
+    box-shadow: 0 0 10px 5px rgba(250, 56, 56, .7);
+    border: 2px solid rgb(250, 56, 56, .7);
+}
+
+.welcome {
+    text-align: right;
+    font-size: 44px;
+}
+
+
+/* Settings End */
+
+
+/* Visualization Start */
+
+.vizualization-wrap {
+    padding-top: 106px;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1160px;
+    padding: 20px;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0 4px 30px 5px rgba(255, 15, 15, 0.4);
+    border: 3px solid rgba(255, 15, 15, 0.4);
+    border-radius: 14px;
+}
+
+.item {
+    width: 10px;
+    height: 400px;
+    background-color: rgb(209, 0, 0, 0.7);
+    border-radius: 7px;
+    transition-duration: .2s;
+}
+
+.swaps {
+    opacity: 0;
+    position: absolute;
+    padding: 5px 25px;
+    bottom: 15vh;
+    right: 18%;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0 4px 30px 5px rgb(46, 46, 46, 0.7);
+    border: 3px solid rgba(255, 15, 15, 0.4);
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+
+/* Visualization End */

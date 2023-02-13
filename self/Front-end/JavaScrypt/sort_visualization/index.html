@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const TIME_FOR_PAIR = 100;
+        let items = document.querySelectorAll('.item');
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.transitionDuration = TIME_FOR_PAIR / 1000 + 's';
+        }
+        var itemHeight = [];
+        var index1 = [];
+        var index2 = [];
+        var amount = 30;
+        var itemWidth;
+    </script>
+
+    <!-- Header Start -->
+
+    <header id="header">
+        <div class="wrapper">
+            <div class="header-wrap">
+                <div class="sort_list">
+                    <button class="start_page" onclick="openMainPage()">Main()</button>
+                    <button class="sort sort-1" onclick="bubbleSortVis()">Bubble sort</button>
+                    <button class="sort sort-2" onclick="insertionSortVis()">Insertion sort</button>
+                    <button class="sort sort-3" onclick="selectionSortVis()">Selection sort</button>
+                    <button class="sort sort-4" onclick="cocktailSortVis()">Cocktail sort</button>
+                    <button class="sort sort-5" onclick="quickSortVis()">Quick sort</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header End -->
+
+    <!-- Settings Start -->
+
+    <section id="settings" class="settings">
+        <div class="wrapper">
+            <div class="settings-wrap">
+                <div class="settings-item settings-part">
+                    <form class="settings__form" action="">
+                        <div class="form-item form-item-1">
+                            <h2>Amount of items</h2>
+                            <input id="amount" type="text" value="30">
+                        </div>
+                        <div class="submit-wrap">
+                            <input type="submit" value="Apply" onclick="ApplySettings()">
+                        </div>
+                    </form>
+                </div>
+                <div class="settings-item introduction-part">
+                    <h1 class="welcome">
+                        Welcome to my <br> Sorting Visualization <br> page.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Settings End -->
+
+    <!-- Visualization Start -->
+
+    <section id="visualization" class="visualization">
+        <div class="wrapper">
+            <div class="vizualization-wrap">
+                <div id="conteiner" class="container">
+                    <div id="swaps" class="swaps"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualization End -->
+
+    <script src="./js/sort.js"></script>
+
+    <script src="./js/settings.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+        openMainPage();
+    </script>
+
+
+</body>
+
+</html>

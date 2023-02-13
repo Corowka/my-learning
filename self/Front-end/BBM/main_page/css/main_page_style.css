@@ -1,0 +1,234 @@
+/* Content Start */
+
+.content_wrap {
+    margin-left: 5vw;
+    display: flex;
+}
+
+
+/* Content End */
+
+
+/* Widgets Start */
+
+.widgets {
+    /* height временно */
+    height: 100vh;
+    width: 20vw;
+    border-right: 1px solid rgba(240, 248, 255, 0.2);
+    background-color: rgb(69, 132, 132);
+}
+
+
+/* Widgets End */
+
+
+/* News Start */
+
+.news {
+    /* height временно */
+    height: 100vh;
+    width: 75vw;
+    background-color: rgb(69, 132, 132);
+}
+
+
+/* News End */
+
+
+/* Search Start */
+
+.srch_bar {
+    position: fixed;
+    right: 1.5vw;
+    bottom: 1.5vw;
+    width: 4vw;
+    height: 4vw;
+    box-shadow: 0 0 10px 1px rgba(34, 46, 46, 0.7);
+    background-color: aliceblue;
+    border-radius: 3vw;
+    z-index: 10;
+    transition: ease-in-out .3s;
+}
+
+.srch_bar:hover {
+    width: 22vw;
+}
+
+.srch_img:hover .srch_bar {
+    box-shadow: 0 0 10px 3px rgb(26, 49, 49);
+}
+
+.srch_submit {
+    position: fixed;
+    right: 2vw;
+    bottom: 2vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    border: none;
+    background-color: aliceblue;
+    box-shadow: 0 0 2px 1px rgb(39, 75, 75);
+    z-index: 12;
+    transition: ease-in-out .3s;
+}
+
+.srch_field {
+    position: fixed;
+    right: 2vw;
+    bottom: 2vw;
+    width: 1vw;
+    height: 3vw;
+    padding: 0 1vw;
+    border: none;
+    box-shadow: none;
+    background-color: aliceblue;
+    border-radius: 2vw;
+    z-index: 11;
+    transition: ease-in-out .3s;
+}
+
+.srch_bar:hover .srch_field {
+    width: 15vw;
+    right: 6vw;
+    box-shadow: 0 0 2px 1px rgb(39, 75, 75);
+}
+
+.srch_field:hover {
+    background-color: rgba(90, 173, 173, 0.3);
+}
+
+.srch_img {
+    position: fixed;
+    right: 2.75vw;
+    bottom: 2.75vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    z-index: 13;
+    opacity: .5;
+}
+
+.srch_submit:hover {
+    background-color: rgba(90, 173, 173, 0.3);
+}
+
+.srch_submit:hover .srch_bar {
+    background-color: rgba(90, 173, 173, 0.3);
+}
+
+
+/* Search End */
+
+
+/* Music_player Start */
+
+.music {
+    position: fixed;
+    left: 50%;
+    bottom: -4.5vw;
+    margin-left: -20vw;
+    width: 40vw;
+    height: 6vw;
+    padding: 0 2vw;
+    z-index: 13;
+    transition: ease-in-out .3s;
+}
+
+.music_bg {
+    width: 40vw;
+    height: 5vw;
+    margin-top: 1vw;
+    margin-left: -2vw;
+    padding: 0 2vw;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px 1px rgba(34, 46, 46, 0.7);
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
+
+.music:hover {
+    bottom: 0;
+}
+
+.progress_bar {
+    border-top: 1px solid aliceblue;
+    height: 0.5vw;
+    width: 40vw;
+    border-radius: 5px;
+    background-color: rgb(39, 75, 75);
+}
+
+.progress_val {
+    height: 0.5vw;
+    width: 32vw;
+    border-radius: 5px;
+    background-color: rgb(90, 173, 173);
+}
+
+.manage_wrap {
+    padding-top: 3px;
+    height: 4vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.music_btn {
+    width: 3vw;
+    height: 3vw;
+    margin-right: 1vw;
+    background: none;
+    border-radius: 50%;
+    transition: ease-in-out .3s;
+}
+
+.music_btn:hover {
+    background-color: rgba(90, 173, 173, 0.3);
+}
+
+.music_btn {}
+
+
+/* Music_player End */
+
+
+/* Sign_in Start */
+
+.sign_in_btn {
+    right: 2vw;
+    top: 1vw;
+    box-shadow: 0 0 10px 1px rgba(34, 46, 46, 0.7);
+}
+
+
+/* Sign_in End */
+
+
+/* Sign_up Start */
+
+.sign_up {
+    position: fixed;
+    display: block;
+    text-decoration: none;
+    top: 1vw;
+    right: 13.5vw;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1.23vh 2.8vw;
+    border-radius: 5vh;
+    background-color: rgb(39, 75, 75);
+    border: 4px solid rgb(90, 173, 173);
+    box-shadow: 0 0 10px 1px rgba(34, 46, 46, 0.7);
+    color: aliceblue;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+}
+
+.sign_up:hover {
+    background-color: rgba(240, 248, 255, 0);
+    border-color: rgb(107, 182, 182);
+    color: rgb(150, 254, 254);
+}
+
+
+/* Sign_up End */

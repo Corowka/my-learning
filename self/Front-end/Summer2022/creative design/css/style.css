@@ -1,0 +1,605 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* General */
+
+body {
+  background: #000000;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.white_btn {
+  display: block;
+  width: 260px;
+  height: 70px;
+  background-color: #ffffff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38.4067px;
+  line-height: 46px;
+  color: #000000;
+  transition-duration: 0.3s;
+}
+.white_btn:hover {
+  opacity: 50%;
+}
+
+/* Header Start */
+
+.header-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 0px 90px;
+}
+
+.header-item a {
+  margin-right: 57px;
+}
+.header-item a:last-child {
+  margin-right: 0;
+}
+
+.logo a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.nav a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+header a {
+  transition-duration: 0.3s;
+}
+
+header a:hover {
+  opacity: 50%;
+}
+
+/* Header End */
+
+/* Intro Start */
+
+.intro {
+  height: 860px;
+}
+
+.intro .pre-title {
+  width: 52%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.intro .title {
+  width: 100%;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 309.341px;
+  line-height: 412px;
+  color: #ffffff;
+}
+
+.intro .title-2 {
+  margin-top: -170px;
+}
+
+.intro .img-bg {
+  width: 530px;
+  height: 530px;
+  position: absolute;
+  z-index: -1;
+}
+
+.intro .top-img {
+  top: 170px;
+  right: 0;
+}
+
+.intro .bottom-img {
+  top: 530px;
+  left: 0;
+}
+
+.intro .btn-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  padding: 80px 400px 50px;
+}
+
+/* Intro End */
+
+/* Portfolio Start */
+
+.portfolio .title {
+  margin: 210px auto 75px;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 81.3081px;
+  line-height: 108px;
+  color: #ffffff;
+}
+
+.portfolio .conteiner {
+  height: fit-content;
+  padding: 0px 75px;
+  display: grid;
+  grid-gap: 75px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 39fr;
+}
+
+.portfolio .item {
+  background-position: center center;
+  background-size: cover;
+}
+
+.portfolio .item-1 {
+  background-image: url(../img/svg/portfolio-1.svg);
+  grid-row: 1/15;
+}
+.portfolio .item-2 {
+  background-image: url(../img/svg/portfolio-2.svg);
+  grid-row: 1/9;
+}
+.portfolio .item-3 {
+  background-image: url(../img/svg/portfolio-3.svg);
+  grid-row: 15/27;
+}
+.portfolio .item-4 {
+  background-image: url(../img/svg/portfolio-4.svg);
+  grid-row: 9/30;
+}
+.portfolio .item-5 {
+  background-image: url(../img/svg/portfolio-5.svg);
+  grid-row: 27/39;
+}
+.portfolio .item-6 {
+  background-image: url(../img/svg/portfolio-6.svg);
+  grid-row: 30/39;
+}
+
+/* Portfolio End */
+
+/* About Start */
+
+.about .title {
+  margin: 380px 0 70px;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 81.3081px;
+  line-height: 108px;
+  color: #ffffff;
+}
+
+.about .conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 800px;
+}
+
+.about .item-1 {
+  width: 55%;
+  padding-right: 85px;
+}
+
+.about .item-2 {
+  width: 45%;
+  outline: 1px solid #000000;
+  outline-offset: -1px;
+}
+
+.about .item p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #ffffff;
+}
+
+/* About End */
+
+/* Testimonials Start */
+
+.testimonials-wrap {
+  padding-top: 380px;
+  padding-bottom: 220px;
+  text-align: center;
+}
+
+.testimonials .top_title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 81px;
+  line-height: 108px;
+  color: #fff;
+}
+
+.testimonials .top_text {
+  max-width: 1020px;
+  margin: 25px auto 100px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  color: #fff;
+}
+
+.testimonials .conteiner {
+  height: 670px;
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 55px;
+}
+
+.testimonials .item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonials .item-1 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  flex-direction: row;
+}
+
+.testimonials .item-2 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  flex-direction: column;
+}
+
+.testimonials .item-3 {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  flex-direction: row;
+}
+
+.testimonials .item_part-1 {
+  padding: 20px;
+  text-align: left;
+}
+
+.testimonials .item-1 .item_part-1 {
+  order: 2;
+}
+
+.testimonials .item-1 .item_part-2 {
+  order: 1;
+}
+
+.testimonials .item-2 .item_part-1 {
+  order: 2;
+}
+
+.testimonials .item-2 .item_part-2 {
+  order: 1;
+}
+
+.testimonials .item-3 .item_part-1 {
+  order: 1;
+}
+
+.testimonials .item-3 .item_part-2 {
+  order: 2;
+}
+
+.testimonials .item_title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 101.52%;
+  color: #ffffff;
+}
+
+.testimonials .item_text {
+  margin: 30px 0 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.testimonials .item-1 .item_title {
+  max-width: 417.5px;
+}
+
+.testimonials .item-2 .item_title {
+  max-width: 279.5px;
+}
+
+.testimonials .item-3 .item_title {
+  max-width: 407.4px;
+}
+
+.testimonials .item-1 .item_text {
+  max-width: 290.5px;
+}
+
+.testimonials .item-2 .item_text {
+  margin: 15px 0 45px;
+  max-width: 220.5px;
+}
+
+.testimonials .item-3 .item_text {
+  max-width: 290.5px;
+}
+
+.testimonials .item .btn {
+  background: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  transition-duration: 0.3s;
+}
+.testimonials .item .btn:hover {
+  opacity: 50%;
+}
+
+.testimonials .item .btn-text {
+  margin-right: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16.0674px;
+  line-height: 19px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.testimonials .item_img {
+  outline: 1px solid #000000;
+  outline-offset: -1px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.testimonials .item_img-1 {
+  width: 327px;
+  background-image: url(../img/svg/person-1.svg);
+}
+
+.testimonials .item_img-2 {
+  height: 309px;
+  background-image: url(../img/svg/person-2.svg);
+}
+
+.testimonials .item_img-3 {
+  width: 327px;
+  background-image: url(../img/svg/person-3.svg);
+}
+
+/* Testimonials End */
+
+/* Contacts Start */
+
+.contacts-wrap {
+  padding-bottom: 410px;
+  margin: 0 auto;
+  max-width: 856px;
+}
+
+.contacts .title {
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 81.3081px;
+  line-height: 108px;
+  color: #ffffff;
+}
+
+.contacts .pre-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44.7477px;
+  line-height: 54px;
+  color: #ffffff;
+}
+
+.contacts .form_item {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  margin-bottom: 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #bbbbbb;
+  border-bottom: 2px solid #ffffff;
+}
+
+.contacts .form_item-3 {
+  padding-bottom: 150px;
+  margin-bottom: 100px;
+}
+
+.contacts .form_sbmt {
+  width: 187px;
+  height: 72px;
+  background: #ffffff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38.4067px;
+  line-height: 46px;
+  color: #000000;
+  transition-duration: 0.3s;
+}
+.contacts .form_sbmt:hover {
+  opacity: 50%;
+}
+
+/*  Contacts End */
+
+/*  Footer Start */
+
+.footer-wrap {
+  padding-bottom: 75px;
+  text-align: center;
+}
+
+footer .year {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  color: #ffffff;
+}
+
+footer .footer_links {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer_link {
+  margin-right: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  color: #ffffff;
+  transition-duration: 0.3s;
+}
+footer .footer_link:last-child {
+  margin-right: 0;
+}
+footer .footer_link:hover {
+  opacity: 50%;
+}
+
+/*  Footer End */

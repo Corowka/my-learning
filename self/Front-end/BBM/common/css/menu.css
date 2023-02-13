@@ -1,0 +1,112 @@
+/* Nav Start */
+
+nav {
+    position: fixed;
+    left: -20vw;
+    width: 25vw;
+    height: 100vh;
+    border-right: 6px solid aliceblue;
+    transition-duration: .4s;
+    box-shadow: 0 0 10px 1px rgba(34, 46, 46, 0.7);
+    background-color: rgb(39, 75, 75);
+}
+
+nav:hover {
+    left: 0;
+}
+
+nav:hover .user_name {
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+nav:hover .nav_link_name {
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.user {
+    height: 4.5vw;
+    margin-bottom: 10vh;
+    display: flex;
+    align-items: center;
+    padding: .75vw;
+}
+
+.user_pic {
+    left: 0.5vw;
+    top: 1vw;
+    position: fixed;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 30%;
+    background-color: rgb(90, 173, 173);
+    transition-duration: .4s;
+}
+
+.user_name {
+    margin-left: 6vw;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+}
+
+.nav_link_name:hover {}
+
+.user_name:hover {
+    opacity: .6;
+}
+
+.nav_links {
+    padding: 0 1.5vw;
+}
+
+.nav_link_wrap {
+    height: 3vw;
+    display: flex;
+    margin-bottom: 2vh;
+    align-items: center;
+}
+
+.nav_link_icon {
+    left: 1vw;
+    position: fixed;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 30%;
+    background-color: rgb(90, 173, 173);
+    transition-duration: .4s;
+}
+
+.nav_link_name {
+    margin-left: 5.5vw;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+}
+
+.nav_link_name:hover {}
+
+.nav_logo {
+    left: 0.75vw;
+    bottom: 1.5vw;
+    position: fixed;
+    width: 3.5vw;
+    background-color: rgb(34, 46, 46);
+    border: 1px solid rgba(240, 248, 255, 0.34);
+    border-radius: 1vw;
+    transition-duration: .4s;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1vw;
+    padding: 1.2vw 0;
+    color: aliceblue;
+}
+
+.nav_logo:hover {
+    background-color: rgba(34, 46, 46, 0);
+    transition: ease-in-out .3s;
+}
+
+
+/* Nav End */

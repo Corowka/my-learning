@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="../common/clear_style.css">
+    <link rel="stylesheet" href="./css/main_page_style.css">
+    <link rel="stylesheet" href="../common/css/menu.css">
+    <link rel="stylesheet" href="../authorization/css/authorization.css">
+    <!-- fonts 500 500i 700-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <title>BBM messenger</title>
+</head>
+
+<body>
+
+    <!-- Nav Start -->
+
+    <nav>
+        <div class="user">
+            <div class="user_pic"></div>
+            <a href="#" class="user_name"> User name </a>
+        </div>
+        <div class="nav_links">
+            <div class="nav_link_wrap">
+                <div class="nav_link_icon"></div>
+                <a href="#" class="nav_link_name">News</a>
+            </div>
+            <div class="nav_link_wrap">
+                <div class="nav_link_icon"></div>
+                <a href="#" class="nav_link_name">Messanges</a>
+            </div>
+            <div class="nav_link_wrap">
+                <div class="nav_link_icon"></div>
+                <a href="#" class="nav_link_name">Groups</a>
+            </div>
+            <div class="nav_link_wrap">
+                <div class="nav_link_icon"></div>
+                <a href="#" class="nav_link_name">Friends</a>
+            </div>
+        </div>
+        <a href="#!" class="nav_logo">BBM</a>
+    </nav>
+
+    <!-- Nav End -->
+
+    <!-- Content Start -->
+
+    <div class="content_wrap">
+        <!-- Widgets Start -->
+
+        <section class="widgets"></section>
+
+        <!-- Widgets End -->
+
+        <!-- News Start -->
+
+        <section class="news"></section>
+        <!-- News End -->
+    </div>
+
+    <!-- Content End -->
+
+    <!-- Search Start -->
+
+    <label for="srch_btn">
+    <section class="srch_bar">
+    <form action="" class="srch_form">
+        <input type="text" placeholder="Write here" class="srch_field">
+        <label for="srch_btn">
+            <img src="./img/svg/search.png" alt="search" class="srch_img">
+            </label>
+    <input id="srch_btn" type="submit" value="" class="srch_submit">
+    </form>
+    </section>
+    </label>
+
+    <!-- Search End -->
+
+    <!-- Music_player Start -->
+
+    <section class="music">
+        <div class="music_bg">
+            <div class="progress_bar">
+                <div class="progress_val"></div>
+            </div>
+            <div class="manage_wrap">
+                <button class="music_btn prev">prev</button>
+                <button class="music_btn stop">stop</button>
+                <button class="music_btn next">next</button>
+                <div class="track_name">Мияги и его сын - ...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music_player End -->
+
+    <!-- Sign_in Start -->
+
+    <button onclick="Auth_come()" class="sign_in_btn">sign in</button>
+
+    <div style="display: none" class="auth_page_bg"></div>
+    <div style="display: none" class="auth">
+        <form id="Auth_form" action="" class="auth_form">
+            <button onclick="Auth_left()" class="auth_close">
+                <p class="crose">+</p>
+            </button>
+            <div class="auth_title">Please enter your details</div>
+            <label>
+            <p class="auth_text">email</p>
+            <input type="text" name="email" placeholder="bbmrteam@gmail.com" class="auth_field">
+        </label>
+            <label>
+            <p class="auth_text">password</p>
+            <input type="password" name="password" placeholder="1L0veB#B#M" class="auth_field">
+        </label>
+            <input type="submit" value="Continue" class="auth_sbmt">
+        </form>
+    </div>
+
+    <script src="../authorization/js/authorization.js"></script>
+
+    <!-- Sign_in End -->
+
+    <!-- Sign_up Start -->
+
+    <a href="#!" class="sign_up">sign up</a>
+
+    <!-- Sign_up End -->
+
+</body>
+
+</html>

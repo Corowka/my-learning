@@ -1,0 +1,21 @@
+.container {
+    margin-left: 5vw;
+    width: 95vw;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+/* Intro Start */
+
+.intro {
+    width: 100%;
+    background-color: rgb(69, 132, 132);
+    height: 50vh;
+}
+
+
+/* Intro End */
