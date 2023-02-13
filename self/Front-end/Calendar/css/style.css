@@ -1,0 +1,257 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    background-color: aliceblue;
+}
+
+.content {
+    height: 80vh;
+    margin: 10vh 0;
+}
+
+.content-1 {
+    width: 25vw;
+    border-right: 2px solid rgb(229, 146, 52);
+}
+
+.content-2 {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content-3 {
+    padding-left: 3vw;
+    width: 25vw;
+    border-left: 2px solid rgb(229, 146, 52);
+}
+
+
+/* Logo Start */
+
+.logo {
+    margin-left: 4vw;
+    display: flex;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.logo .bold {
+    width: 60px;
+    padding-left: 4px;
+    margin-right: 6px;
+    text-align: center;
+    font-weight: 900;
+    padding-right: 2px;
+    background-color: rgb(229, 146, 52);
+    border-radius: 1vh;
+    color: white;
+}
+
+
+/* Logo End */
+
+
+/* Calendar Start */
+
+.year {
+    width: 15vw;
+    text-align: center;
+    border-radius: 1.5vw;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(229, 146, 52);
+}
+
+.month {
+    width: 42vw;
+    padding: 1vh 0;
+    text-align: center;
+    border-radius: 1.5vw;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(229, 146, 52);
+    color: white;
+}
+
+.days {
+    width: 42vw;
+    height: 300px;
+    padding: 1vw;
+    border: 5px solid rgb(255, 215, 128);
+    border-radius: 1.5vw;
+}
+
+
+/* Calendar End */
+
+
+/* Flags Start */
+
+.flags {
+    margin: 6vh 0 1vh 1vh;
+    font-size: 30px;
+    color: black;
+}
+
+.content-3 .hr {
+    width: 19vw;
+    border-top: 2px solid rgb(229, 146, 52);
+    margin-bottom: 20px;
+}
+
+.flg_form {
+    width: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inpt_flg_name {
+    max-width: 14vw;
+    height: 4vw;
+    padding: 0 3vh;
+    background-color: aliceblue;
+    border: 3px solid rgb(229, 146, 52);
+    font-size: 1.2vw;
+    border-radius: 8px;
+}
+
+.add_flg {
+    width: 4vw;
+    height: 4vw;
+    background-color: rgb(229, 146, 52);
+    border: 3px solid rgb(229, 146, 52);
+    border-radius: 8px;
+    font-size: 3vw;
+    font-weight: 900;
+    color: white;
+    transition-duration: .2s;
+}
+
+.add_flg:hover {
+    background-color: aliceblue;
+    border: 3px solid rgb(229, 146, 52);
+    color: rgb(229, 146, 52);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.day {
+    width: 4vw;
+    height: 4vw;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.2vw solid rgb(229, 146, 52);
+    border-radius: 0.6vw;
+    font-size: 2vw;
+    font-weight: 900;
+    color: rgb(203, 129, 45);
+}
+
+
+/* Flags End */

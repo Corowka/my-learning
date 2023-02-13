@@ -1,0 +1,429 @@
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Упрощаем работу с изображениями */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article>*+* {
+    margin-top: 1em;
+}
+
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: 0;
+}
+
+input:active,
+ :hover,
+ :focus {
+    outline: 0;
+}
+
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.wrapper {
+    max-width: 1000px;
+    padding: 0 22px;
+    margin: 0 auto;
+}
+
+
+/* Header Start */
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+}
+
+.header_wrap {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_link {
+    display: block;
+    transition-duration: .3s;
+}
+
+.logo_link:hover {
+    opacity: 50%;
+}
+
+.header_btn_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enter {
+    width: 78px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    color: #1D1D1D;
+    background-color: #FFFFFF;
+    border: 2px solid #7575753d;
+    border-radius: 3px;
+    transition-duration: .3s;
+}
+
+.enter:hover {
+    background-color: #ededed90;
+}
+
+.basket {
+    width: 40px;
+    height: 40px;
+    margin-left: 27px;
+    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    transition-duration: .3s;
+}
+
+.basket:hover {
+    background-color: #ededed90;
+}
+
+
+/* Header End */
+
+
+/* To_top Start */
+
+.to_top {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 24px;
+    right: 16px;
+    background: #59BD5A;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* To_top End */
+
+
+/* Catalog Start */
+
+.catalog {
+    padding: 128px 0 80px;
+}
+
+.search_field {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid#7575753d;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #626262;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.catalog_title {
+    margin: 56px 0 16px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #1D1D1D;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+
+.card {
+    display: block;
+    text-decoration: none;
+    transition-duration: .4s;
+    box-shadow: 0 0 10px 2px #62626200;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 2px rgba(98, 98, 98, 0.589)
+}
+
+.card_img {
+    margin-top: -1px;
+    width: 100%;
+    height: 257px;
+}
+
+.card_title {
+    margin-top: 16px;
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #1D1D1D;
+}
+
+.card_description {
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #626262;
+}
+
+.card_time {
+    margin-left: 5px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #1D1D1D;
+}
+
+
+/* Catalog End */
+
+
+/* Footer Start */
+
+footer {
+    padding-top: 56px;
+    background: #262626;
+}
+
+.footer_info {
+    margin-top: 40px;
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 32px 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.language {
+    width: 270px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #3B3B3B;
+    border-radius: 2px;
+}
+
+.world {
+    display: block;
+    margin: 0 16px;
+}
+
+.selected_language {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+}
+
+.hashtag_wrap {
+    margin-top: 35px;
+    display: flex;
+}
+
+.hashtag {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hash {
+    color: #49A144;
+}
+
+.hashtag_name {
+    color: #FFFFFF;
+}
+
+.soc_wrap {
+    margin-top: 20px;
+    width: 86px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_link {
+    margin-top: 23px;
+    display: block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+    transition-duration: .3s;
+}
+
+.info_link:hover,
+ :focus {
+    opacity: 50%;
+}
+
+.info_link:first-child {
+    margin-top: 8px;
+}
+
+.donload_wrap {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.donload {
+    display: inline-block;
+    margin-right: 42px;
+}
+
+.donload:last-child {
+    margin-right: 0;
+}
+
+.footer_bottom {
+    padding: 40px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bottom_link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+    transition-duration: .3s;
+}
+
+.bottom_link:hover,
+ :focus {
+    opacity: 50%;
+}
+
+
+/* Footer End */
