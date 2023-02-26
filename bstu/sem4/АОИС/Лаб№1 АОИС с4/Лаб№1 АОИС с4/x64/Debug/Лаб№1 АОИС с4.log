@@ -1,0 +1,14 @@
+﻿  HashTable.cpp
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(75,18): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(81,34): warning C4267: инициализация: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(107,31): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(117,31): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(131,29): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(136,37): warning C4018: <: несоответствие типов со знаком и без знака
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(150,38): warning C4018: <: несоответствие типов со знаком и без знака
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(159,36): warning C4018: <: несоответствие типов со знаком и без знака
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(171,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(187,10): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(194,11): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\Лаб№1 АОИС с4\HashTable.cpp(225,40): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Лаб№1 АОИС с4.vcxproj -> C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб№1 АОИС с4\x64\Debug\Лаб№1 АОИС с4.exe
