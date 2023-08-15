@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб №5 АОИС с4\Лаб №5 АОИС с4\Source.cpp(95,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Лаб №5 АОИС с4.vcxproj -> C:\My Drive\my-learning\bstu\sem4\АОИС\Лаб №5 АОИС с4\x64\Debug\Лаб №5 АОИС с4.exe

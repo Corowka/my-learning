@@ -1,0 +1,15 @@
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.csproj.AssemblyReference.cache
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.GeneratedMSBuildEditorConfig.editorconfig
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.AssemblyInfoInputs.cache
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.AssemblyInfo.cs
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.csproj.CoreCompileInputs.cache
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\bin\Debug\net6.0\WarTime.exe
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\bin\Debug\net6.0\WarTime.deps.json
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\bin\Debug\net6.0\WarTime.runtimeconfig.json
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\bin\Debug\net6.0\WarTime.dll
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\bin\Debug\net6.0\WarTime.pdb
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.dll
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\refint\WarTime.dll
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.pdb
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\WarTime.genruntimeconfig.cache
+C:\My Drive\my-learning\bstu\sem4\ППОИС\WarTime\obj\Debug\net6.0\ref\WarTime.dll

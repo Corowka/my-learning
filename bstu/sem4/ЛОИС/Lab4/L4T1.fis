@@ -1,0 +1,30 @@
+[System]
+Name='L4T1'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=2
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='A'
+Range=[-100 100]
+NumMFs=2
+MF1='A1':'sigmf',[-0.0914016916004408 -105.147612834103]
+MF2='B1':'sigmf',[-1.60190355619297 -88.6088656578029]
+
+[Output1]
+Name='B'
+Range=[-35.9977242290662 35.9977242290662]
+NumMFs=2
+MF1='B1':'linear',[0.37521591058973 0.0100428341740129]
+MF2='B2':'linear',[0.0913277945727042 -26.0518594539374]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1

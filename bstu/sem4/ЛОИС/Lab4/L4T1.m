@@ -1,19 +1,13 @@
-x = 0:0.1:5*pi;
-y = sin(x) + randn(size(x)) * 0.1;
+f = @(x) (sin(x / exp(1)) + x ./ exp(1));
 
-plot(x, y, 'r', 'LineWidth', 0.1)
-data = [x' y'];
+X_train = transpose(-100:1:100);
+y_train = f(X_train);
 
-% Создание нечеткой системы
-fis = genfis1(data, 2, 'gbellmf', 'linear');
+dataEdu = cat(2, X_train, y_train);
 
-% Обучение ANFIS модели
-anfis_model = anfis(data, fis, 50);
+X_test = transpose(-99.5:1:100.5);
+y_test = f(X_test);
 
-% Тестирование модели
-x_test = -3:0.01:3;
-y_test = evalfis(x_test, anfis_model);
+dataTest = cat(2, X_test, y_test);
 
-% Построение графиков
-plot(x, y, 'o', x_test, y_test, '-')
-legend('Данные', 'Модель')
+dataOutput = [];
