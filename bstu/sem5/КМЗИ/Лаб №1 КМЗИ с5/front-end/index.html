@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Crypt</title>
+</head>
+
+<body>
+    <p class="public-key">my-public-key</p>
+    <button id="refresh">Обновить</button>
+
+    <div class="wrapper">
+
+        <div class="open-keys-wrap">
+            <label for="">Список активных открытых ключей</label>
+            <div class="open-keys-list"></div>
+        </div>
+
+        <div class="msg-wrap">
+
+            <div class="messange-wrap">
+                <label for="">Полученное сообщение</label>
+                <p id="recived"></p>
+                <button id="check">Проверить почту</button>
+            </div>
+
+            <div class="messange-wrap">
+                <label for="messange-input">Текст сообщения</label>
+                <input id="messange-input" type="text">
+                <label for="">Открытый ключ получателя</label>
+                <div class="keys-input-wrap">
+                    <input id="n-input" type="text">
+                    <input id="e-input" type="text">
+                </div>
+                <button id="send">Отправить</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
