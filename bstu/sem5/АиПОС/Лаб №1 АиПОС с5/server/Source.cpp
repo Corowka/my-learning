@@ -1,26 +1,97 @@
 #pragma comment(lib, "ws2_32.lib")
 #include <winsock2.h>
 #include <iostream>
+#include <fstream>
+#include <chrono>
+#include <string>
+#include <thread>
+#include <mutex>
+#include <algorithm>
+#include <vector>
+#include <sstream>
 
 #pragma warning(disable: 4996)
 
-SOCKET Connections[100];
-int Counter = 0;
+SOCKET Connection;
+std::mutex g_lock;
 
-void ClientHandler(int index) {
+void ClientRecvHandler() {
 	char msg[256];
 	while (true) {
-		recv(Connections[index], msg, sizeof(msg), NULL);
-		std::cout << msg << std::endl;
-		for (int i = 0; i < 100; i++) {
-			if (i == index) {
-				continue;
+		recv(Connection, msg, sizeof(msg), NULL);
+		char* ptr = strstr(msg, "create");
+		if (ptr) {
+
+			g_lock.lock();
+
+			std::cout << msg << std::endl;
+			std::istringstream iss(msg);
+			std::vector<std::string> tokens;
+			std::string token;
+			while (iss >> token) {
+				tokens.push_back(token);
+				if (tokens.size() > 1) {
+					break;
+				}
 			}
-			send(Connections[i], msg, sizeof(msg), NULL);
+			std::string rest;
+			std::getline(iss, rest);
+
+			if (tokens.size() < 2) {
+				const char* err = "code1";
+				send(Connection, err, sizeof(err), NULL);
+				g_lock.unlock();
+				exit(0);
+			}
+
+			if (tokens[1].find(".txt") == -1) {
+				const char* err = "code1";
+				send(Connection, err, sizeof(err), NULL);
+				g_lock.unlock();
+				exit(0);
+			}
+
+			std::ofstream file(tokens[1]);
+			if (file.is_open()) {
+				file << rest << std::endl;
+				file.close();
+			}
+			else { std::cerr << "Ошибка при создании или открытии файла." << std::endl; }
+
+			std::ifstream filebin(tokens[1], std::ios::binary);
+			filebin.seekg(0, std::ios::end);
+			std::streamsize fileSize = filebin.tellg();
+			filebin.close();
+			std::string fileSizeString = std::to_string(static_cast<long long>(fileSize)).c_str();
+
+			send(Connection, fileSizeString.c_str(), sizeof(fileSizeString.c_str()), NULL);
+
+			g_lock.unlock();
+		}
+		else {
+			std::cout << "Server: " << msg << std::endl;
 		}
 	}
 }
 
+void ClientSendHandler() {
+	bool HomeKeyState = !GetKeyState(VK_HOME);
+	bool isMessageEntered = false;
+	char msg[256];
+	while (true) {
+		if (!isMessageEntered) {
+			std::cin.getline(msg, sizeof(msg));
+			std::cout << "Press HOME to sent it." << std::endl;
+			isMessageEntered = true;
+			HomeKeyState = !GetKeyState(VK_HOME);
+		}
+		if (isMessageEntered && HomeKeyState == GetKeyState(VK_HOME)) {
+			std::cout << "Massage was sended." << std::endl;
+			send(Connection, msg, sizeof(msg), NULL);
+			isMessageEntered = false;
+		}
+	}
+}
 int main(int argc, char* argv[]) {
 	WSAData wsaData;
 	WORD DLLVersion = MAKEWORD(2, 1);
@@ -39,22 +110,14 @@ int main(int argc, char* argv[]) {
 	bind(sListen, (SOCKADDR*)&addr, sizeof(addr));
 	listen(sListen, SOMAXCONN);
 
-	for (int i = 0; i < 100; i++) {
-		SOCKET newConnection;
-		newConnection = accept(sListen, (SOCKADDR*)&addr, &sizeofaddr);
+	Connection = accept(sListen, (SOCKADDR*)&addr, &sizeofaddr);
+	std::cout << "Client Connected:\n";
 
-		if (newConnection == 0) {
-			std::cout << "Error #2\n";
-			return 1;
-		} else {
-			std::cout << "Client Connected:\n";
-			
-			Connections[Counter] = newConnection;
-			Counter++;
-			CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)ClientHandler, (LPVOID)(i), NULL, NULL);
-		}
-	}
+	std::thread thr1(ClientRecvHandler);
+	std::thread thr2(ClientSendHandler);
+	thr1.join();
+	thr2.join();
 
-	system("pause");
+	while (true) {}
 	return 0;
 }

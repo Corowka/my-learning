@@ -1,0 +1,2 @@
+openssl enc ^ -rc4 ^ -K 74c8a19fee9e0710683afe526462c961 ^ -e ^ -in opentext.txt ^ -out encryptedtext.txt -provider legacy -provider default
+openssl enc ^ -rc4 ^ -K 74c8a19fee9e0710683afe526462c961 ^ -e ^ -d ^ -in encryptedtext.txt ^ -out decryptedtext.txt -provider legacy -provider default

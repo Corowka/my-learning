@@ -20,5 +20,5 @@ console.log(`accuracy: ${accuracy}`);
 console.log(`[0, 0] = 0 --> ${model.predict([0, 0])}`);
 console.log(`[0, 1] = 0 --> ${model.predict([0, 1])}`);
 console.log(`[1, 0] = 0 --> ${model.predict([1, 0])}`);
-console.log(`[1, 1] = 1 --> ${model.predict([1, 1])}`);
+console.log(`[1, 1] = 1 --> ${model.predict([5, 5])}`);
 

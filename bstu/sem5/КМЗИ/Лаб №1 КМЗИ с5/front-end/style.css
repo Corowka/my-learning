@@ -5,11 +5,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #320A18, #BFFF00);
+    background: url(./bg.jpg);
+    background-size: 200% 140%;
+    animation: movebg 60s infinite linear;
+}
+
+@keyframes movebg {
+    0% {
+        background-position: 0 70%;
+    }
+    100% {
+        background-position: 100% 70%;;
+    }
 }
 
 .open-keys-wrap {
-    height: 408px;
+    height: 542px;
     background-color: white;
     width: 30vw;
     padding: 30px;
@@ -27,7 +38,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .key {
@@ -48,15 +59,16 @@
 }
 
 .public-key {
-    top: 30px;
-    transform: translateX(-50%);
-    left: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    top: 50%;
     position: fixed;
     font-size: 20px;
     font-weight: 600;
     border-radius: 10px;
-    background-color: #BFFF00;
+    background-color: #320A18;
     padding: 10px;
+    color: white;
 }
 
 #refresh {
@@ -86,12 +98,17 @@
     align-items: center;
     flex-direction: column;
     padding: 30px;
+    margin-bottom: 30px;
     background-color: white;
+}
+
+.messange-wrap:last-child {
+    margin-bottom: 0;
 }
 
 #recived {
     height: 26.4px;
-    padding: 5px;
+    padding: 5px 0;
     border-radius: 5px;
     width: 100%;
     margin-bottom: 10px;
@@ -100,16 +117,12 @@
     border: 2px solid black;
 }
 
-label {
+h2 {
     font-weight: 600;
     width: 100%;
     margin-bottom: 10px;
     color: #320A18;
     font-size: 20px;
-}
-
-.messange-wrap:first-child {
-    margin-bottom: 30px;
 }
 
 .messange-wrap > input {

@@ -1,17 +1,107 @@
 #pragma comment(lib, "ws2_32.lib")
 #include <winsock2.h>
 #include <iostream>
-#include <conio.h>
+#include <fstream>
+#include <chrono>
+#include <string>
+#include <thread>
+#include <mutex>
+#include <stdio.h>
+#include <string.h>
 
 #pragma warning(disable: 4996)
 
-SOCKET Connection;
+#define PORT 3000
+#define IP "127.0.0.1"
 
-void ClientHandler() {
+SOCKET Connection;
+std::mutex g_lock;
+std::string filename;
+
+void ClientRecvHandler() {
 	char msg[256];
 	while (true) {
 		recv(Connection, msg, sizeof(msg), NULL);
-		std::cout << msg << std::endl;
+		g_lock.lock();
+
+		long long currentTimeMillis = std::chrono::duration_cast<std::chrono::milliseconds>(
+			std::chrono::system_clock::now().time_since_epoch()
+		).count();
+		std::ofstream file(filename, std::ios::app);
+		if (file.is_open()) {
+			file << "Server: " << msg << " at: " << std::to_string(currentTimeMillis) << std::endl;
+			file.close();
+		}
+		else { std::cerr << "Ошибка при создании или открытии файла." << std::endl; }
+
+		g_lock.unlock();
+		if (strstr("code1", msg)) {
+			std::cerr << "Server interrupted connection." << std::endl;
+			exit(0);
+		}
+		else {
+			std::cout << "Server: " << msg << std::endl;
+		}
+	}
+}
+
+void ClientSendHandler() {
+	bool HomeKeyState = !GetKeyState(VK_HOME);
+	bool isMessageEntered = false;
+	bool isCommandDisconect = false;
+	char msg[256];
+	while (true) {
+		if (!isMessageEntered) {
+			std::cin.getline(msg, sizeof(msg));
+			std::cout << "Press HOME to sent it." << std::endl;
+			isMessageEntered = true;
+			HomeKeyState = !GetKeyState(VK_HOME);
+			char* ptr = strstr(msg, "disconnect");
+			if (ptr) {
+				isCommandDisconect = true;
+			}
+		}
+		if (isCommandDisconect) {
+			std::string command(msg);
+			std::string test = "disconnect " + std::to_string(PORT) + ' ' + IP;
+			if (command == test) {
+				std::cout << "Connection interrupted.\n";
+				g_lock.lock();
+
+				long long currentTimeMillis = std::chrono::duration_cast<std::chrono::milliseconds>(
+					std::chrono::system_clock::now().time_since_epoch()
+				).count();
+				std::ofstream file(filename, std::ios::app);
+				if (file.is_open()) {
+					file << "Connection interrupted at: " << std::to_string(currentTimeMillis) << std::endl;
+					file.close();
+				}
+				else { std::cerr << "Ошибка при создании или открытии файла." << std::endl; }
+
+				g_lock.unlock();
+				exit(0);
+			}
+			isCommandDisconect = false;
+			isMessageEntered = false;
+		}
+		if (isMessageEntered && HomeKeyState == GetKeyState(VK_HOME)) {
+			std::cout << "Massage was sended." << std::endl;
+			send(Connection, msg, sizeof(msg), NULL);
+			isMessageEntered = false;
+			g_lock.lock();
+
+			long long currentTimeMillis = std::chrono::duration_cast<std::chrono::milliseconds>(
+				std::chrono::system_clock::now().time_since_epoch()
+			).count();
+			std::ofstream file(filename, std::ios::app);
+			if (file.is_open()) {
+				file << "Client: " << msg << " at: " << std::to_string(currentTimeMillis) << std::endl;
+				file.close();
+			}
+			else { std::cerr << "Ошибка при создании или открытии файла." << std::endl; }
+
+			g_lock.unlock();
+		}
 	}
 }
 
@@ -25,39 +115,32 @@ int main(int argc, char* argv[]) {
 
 	SOCKADDR_IN addr;
 	int sizeofaddr = sizeof(addr);
-	addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-	addr.sin_port = htons(3000);
+	addr.sin_addr.s_addr = inet_addr(IP);
+	addr.sin_port = htons(PORT);
 	addr.sin_family = AF_INET;
 
 	Connection = socket(AF_INET, SOCK_STREAM, NULL);
 	if (connect(Connection, (SOCKADDR*)&addr, sizeof(addr)) != 0) {
 		std::cout << "Error: failed connect to server.\n";
 	}
-	std::cout << "Connected!\n";
 
-	CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)ClientHandler, NULL, NULL, NULL);
-
-	bool isMsgEntered = false;
-	bool HomeKeyStartState = GetKeyState(VK_HOME);
-
-	std::cout << isMsgEntered << " <-- flag" << std::endl;
-	char msg[256];
-	while (true) { 
-		if (HomeKeyStartState != GetKeyState(VK_HOME) && !isMsgEntered) {
-			std::cout << "Enter new massage: ";
-			std::cin.getline(msg, sizeof(msg));
-			std::cout << (GetKeyState(VK_HOME) == 1) << ' ' << isMsgEntered << " <-- input" << std::endl;
-			std::cout << "Your msg: " << msg << ".\nPress HOME again to sent it." << std::endl;
-			isMsgEntered = true;
-		}
-		if (HomeKeyStartState == GetKeyState(VK_HOME) && isMsgEntered) {
-			std::cout << "Msg was sended." << std::endl;
-			std::cout << (GetKeyState(VK_HOME) == 1) << ' ' << isMsgEntered << " <-- send" << std::endl;
-			send(Connection, msg, sizeof(msg), NULL);
-			isMsgEntered = false;
-		}
+	long long currentTimeMillis = std::chrono::duration_cast<std::chrono::milliseconds>(
+		std::chrono::system_clock::now().time_since_epoch()
+	).count();
+	filename = "conection_id" + std::to_string(currentTimeMillis) + ".txt";
+	std::ofstream file(filename);
+	if (file.is_open()) {
+		file << "Client connected at: " << std::to_string(currentTimeMillis) << std::endl;
+		std::cout << "Client connected at: " << std::to_string(currentTimeMillis) << std::endl;
+		file.close();
 	}
+	else { std::cerr << "Ошибка при создании или открытии файла." << std::endl; }
 
-	system("pause");
+	std::thread thr1(ClientRecvHandler);
+	std::thread thr2(ClientSendHandler);
+	thr1.join();
+	thr2.join();
+
+	while (true) {}
 	return 0;
-}
+}	

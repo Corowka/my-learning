@@ -6,6 +6,16 @@ function addKeyItem(key) {
     container.appendChild(item);
 }
 
+function generateRandomUnicodeString() {
+    let result = '';
+    const characters = '0123456789'; 
+    for (let i = 0; i < 3; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      result += characters.charAt(randomIndex);
+    }
+    return result;
+  }
+
 async function refreshKeyList() {
     await fetch('http://localhost:5000/mail/getPublicKeys')
         .then(response => {
@@ -20,6 +30,7 @@ async function refreshKeyList() {
                 while (container.firstChild) {
                     container.removeChild(container.firstChild);
                 }
+                console.log(data.mail);
                 for (item of data.mail) {
                     addKeyItem(`n: ${item.n} e: ${item.e}`);
                 }
@@ -28,7 +39,42 @@ async function refreshKeyList() {
         .catch(error => { console.error(error); });
 }
 
-async function checkMail(keys, rc4) {
+async function conect(rsa, rc4key) {
+    const n = document.getElementById('n-input-con').value;
+    const e = document.getElementById('e-input-con').value;
+    if (!(n && e)) {
+        console.log('(клиент) Неполные данные');
+        return;
+    }
+    const keys = {n, e, key: rsa.encrypt(rc4key, n, e)};
+
+    fetch('http://localhost:5000/mail/conect', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(keys)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Проблемы с соединением');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.message) {
+                console.log(data.message);
+                return generateRandomUnicodeString();
+            } else {
+                return rsa.decrypt(data.key);
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}
+
+async function checkMail(keys, rc4, rc4key) {
 
     fetch('http://localhost:5000/mail/checkMail', {
         method: 'POST',
@@ -48,7 +94,7 @@ async function checkMail(keys, rc4) {
             console.log(data.message)
             let message = data.message;
             if (!message.includes('(сервер)')) {
-                message = rc4.crypt(message, String(keys.n))
+                message = rc4.crypt(message, rc4key);
             }
             textItem.textContent = message;
         })
@@ -57,11 +103,11 @@ async function checkMail(keys, rc4) {
         });
 }
 
-async function sendMessage(rc4) {
+async function sendMessage(rc4, rc4key) {
     
-    const n = document.getElementById('n-input').value;
-    const e = document.getElementById('e-input').value;
-    const message = rc4.crypt(document.getElementById('messange-input').value, String(n));
+    const n = document.getElementById('n-input-send').value;
+    const e = document.getElementById('e-input-send').value;
+    const message = rc4.crypt(document.getElementById('messange-input').value, rc4key);
     if (!(n && e && message)) {
         console.log('(клиент) Неполные данные');
         return;
@@ -92,9 +138,9 @@ async function sendMessage(rc4) {
 
 class RSA {
     constructor() {
-        this.p1 = this.getPrime(this.getRamdomInt(0, 500));
-        this.p2 = this.getPrime(this.getRamdomInt(0, 500));
-        this.e = this.getPrime(this.getRamdomInt(0, 10));
+        this.p1 = this.getPrime(this.getRamdomInt(0, 100));
+        this.p2 = this.getPrime(this.getRamdomInt(0, 100));
+        this.e = this.getPrime(this.getRamdomInt(0, 3));
         this.n = this.p1 * this.p2;
         this.f = (this.p1 - 1) * (this.p2 - 1);
         this.k = 2;
@@ -110,11 +156,7 @@ class RSA {
             2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
             41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89,
             97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151,
-            157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223,
-            227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281,
-            283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359,
-            367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433,
-            439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499
+            157, 163, 167, 173, 179, 181, 191, 193, 197, 199
         ];
         return primes[n % primes.length];
     }
@@ -123,8 +165,12 @@ class RSA {
         return { n: this.n, e: this.e };
     }
 
-    decryptMessange(message) {
-        return Math.pov(message, this.d) % this.n;
+    encrypt(message, n, e) {
+        return (+message) ** e % n + '';
+    }
+
+    decrypt(message) {
+        return (+message) ** this.d % this.n + '';
     }
 }
 
@@ -156,7 +202,7 @@ class RC4 {
     }
 
     crypt(str, key) {
-        key = key.split('').map((item) => +item);
+        key = String(key).split('').map((item) => +item);
         const s = this.shuffle(key);
         const message = str.split('').map((item) => item.charCodeAt(0));
         const rand = this.pseudoRandomByte(s);
@@ -170,10 +216,19 @@ class RC4 {
 const rsa = new RSA();
 const rc4 = new RC4();
 
+let rc4key = generateRandomUnicodeString();
+console.log(rc4key)
+
 const keys = rsa.getPublicKey();
 document.querySelector('.public-key').textContent = `n: ${keys.n} e: ${keys.e}`;
 
+(async () => {
+    await checkMail(keys, rc4); 
+    await refreshKeyList();
+})();
+
 document.getElementById('refresh').addEventListener('click', (async () => { await refreshKeyList(); }));
-document.getElementById('send').addEventListener('click', (async () => { await sendMessage(rc4); }));
-document.getElementById('check').addEventListener('click', (async () => { await checkMail(keys, rc4); }));
+document.getElementById('send').addEventListener('click', (async () => { await sendMessage(rc4, rc4key); }));
+document.getElementById('conect').addEventListener('click', (async () => { rc4key = await conect(rsa, rc4key); }));
+document.getElementById('check').addEventListener('click', (async () => { await checkMail(keys, rc4, rc4key); }));
 

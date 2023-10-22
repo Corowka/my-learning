@@ -16,25 +16,33 @@
     <div class="wrapper">
 
         <div class="open-keys-wrap">
-            <label for="">Список активных открытых ключей</label>
+            <h2 for="">Список активных открытых ключей</h2>
             <div class="open-keys-list"></div>
         </div>
 
         <div class="msg-wrap">
 
             <div class="messange-wrap">
-                <label for="">Полученное сообщение</label>
+                <h2 for="">Открытый ключ получателя</h2>
+                <div class="keys-input-wrap">
+                    <input id="n-input-con" type="text">
+                    <input id="e-input-con" type="text">
+                </div>
+                <button id="conect">Соединиться</button>
+            </div>
+
+            <div class="messange-wrap">
+                <h2 for="recived">Полученное сообщение</h2>
                 <p id="recived"></p>
                 <button id="check">Проверить почту</button>
             </div>
 
             <div class="messange-wrap">
-                <label for="messange-input">Текст сообщения</label>
+                <h2 for="">Текст сообщения</h2>
                 <input id="messange-input" type="text">
-                <label for="">Открытый ключ получателя</label>
                 <div class="keys-input-wrap">
-                    <input id="n-input" type="text">
-                    <input id="e-input" type="text">
+                    <input id="n-input-send" type="text">
+                    <input id="e-input-send" type="text">
                 </div>
                 <button id="send">Отправить</button>
             </div>

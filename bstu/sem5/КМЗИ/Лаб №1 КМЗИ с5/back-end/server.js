@@ -17,6 +17,28 @@ class Controller {
         }
     }
 
+    conect(req, res) {
+        try {
+            const { n, e, key } = req.body;
+            for (let i = 0; i < this.mail.length; i++) {
+                if (this.mail[i].n == n && this.mail[i].e == e) {
+                    if (this.mail[i].key) {
+                        const key = this.mail[i].key;
+                        delete this.mail[i].key;
+                        return res.json({ key });
+                    } else {
+                        this.mail[i].key = key;
+                        return res.json({ message: '(сервер) Ключ передан' });
+                    }
+                }
+            }
+            return res.json({ message: '(сервер) Почты с таким адресом не существует' });
+        } catch (e) {
+            console.log(e);
+            return res.status(400).json({ message: 'Check error' });
+        }
+    }
+
     checkMail(req, res) {
         try {
             const { n, e } = req.body;
@@ -64,7 +86,9 @@ const controller = new Controller();
 const router = new Router();
 router.get('/getPublicKeys', controller.getPublicKeys.bind(controller));
 router.post('/checkMail', controller.checkMail.bind(controller));
+router.post('/conect', controller.conect.bind(controller));
 router.post('/sendMessage', controller.sendMessage.bind(controller));
+
 
 const app = express();
 app.use(express.json());

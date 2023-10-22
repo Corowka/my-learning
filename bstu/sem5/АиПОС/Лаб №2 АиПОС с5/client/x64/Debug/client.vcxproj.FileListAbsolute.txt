@@ -1,0 +1,2 @@
+C:\Users\kopan\OneDrive\Desktop\АиПОС\Лаб №1 АиПОС с5\client\x64\Debug\client.exe
+C:\Users\kopan\OneDrive\Desktop\АиПОС\Лаб №2 АиПОС с5\client\x64\Debug\client.exe
