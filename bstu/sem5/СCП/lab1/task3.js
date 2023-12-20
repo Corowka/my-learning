@@ -13,4 +13,5 @@ function createWord(n) {
     return Array.from({length: n}, () => alph[randInt(0, alph.length)]).join('');
 }
 
-console.log(createWord(10));
+console.log(createWord(100
+    ));

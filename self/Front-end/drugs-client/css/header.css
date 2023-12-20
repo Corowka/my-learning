@@ -1,0 +1,68 @@
+.header {
+    padding: 0 20px;
+    width: 100vw;
+    background-color: #679290;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.top-header-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#user_profile_btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+#user_profile_btn > img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user_name {
+    font-size: 16px;
+    color: white;
+}
+
+.bottom-header {
+    box-sizing: border-box;
+    padding: 8px 0px;
+    border-top: 2px solid #EEC175;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.page-item {
+    width: 100px;
+    font-size: 14px;
+    border: 2px solid #679290;
+    border-radius: 5px;
+    background-color: #DAEEDE;
+    color: #679290;
+}
+
+#sign-btn {
+    padding: 4px 10px;
+    color: #394e4d;
+    border-radius: 5px;
+    border: 2px solid #eed2a2;
+    background-color: #EEC175;
+    margin-right: 10px;
+}
+
+.selected {
+    background-color: #EEC175;
+    border: 2px solid #e8c992;
+}
+

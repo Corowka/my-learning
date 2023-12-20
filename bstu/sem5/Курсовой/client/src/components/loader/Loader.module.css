@@ -1,0 +1,31 @@
+.bg {
+    width: 100vw;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    display: flex;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-top: 3px solid #4096ff;
+    border-left: 3px solid #4096ff;
+    margin-right: 8px;
+    animation: rotating infinite 1.5s linear;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotateZ(0deg);
+    }
+  
+    to {
+        transform: rotateZ(360deg);
+    }
+  }

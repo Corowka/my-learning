@@ -1,7 +1,0 @@
-﻿  Source.cpp
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 2\Source.cpp(4,24): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 2\Source.cpp(10,17): warning C4305: инициализация: усечение из "double" в "float"
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 2\Source.cpp(25,14): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 2\Source.cpp(37,78): warning C4305: аргумент: усечение из "double" в "float"
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 2\Source.cpp(50,2): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  АОИС 2.vcxproj -> C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 2\x64\Debug\АОИС 2.exe

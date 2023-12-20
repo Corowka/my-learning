@@ -1,4 +1,0 @@
-﻿  Source.cpp
-C:\Users\kopan\OneDrive\Desktop\АиПОС\Лаб №2 АиПОС с5\client\Source.cpp(98,64): warning C4805: ==: небезопасное смешение типа "bool" и типа "SHORT" в операции
-C:\Users\kopan\OneDrive\Desktop\АиПОС\Лаб №2 АиПОС с5\client\Source.cpp(58,10): warning C4101: msg: неиспользованная локальная переменная
-  client.vcxproj -> C:\Users\kopan\OneDrive\Desktop\АиПОС\Лаб №2 АиПОС с5\client\x64\Debug\client.exe

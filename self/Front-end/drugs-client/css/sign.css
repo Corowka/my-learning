@@ -1,0 +1,137 @@
+#pol-page {
+    top: 0;
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    display: none;
+}
+
+.polisy {
+    background: none;
+    border: none;
+}
+
+/* Sign Start */
+
+#sign-page{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app-name {
+    padding: 10px 15px;
+    background-color: #679290;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sign-bnts-wrap {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+}
+
+.sign-btn {
+    padding: 8px 20px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #9cc4c1;
+    background-color: #679290;
+    transition-duration: .1s;
+    font-size: 16px;
+}
+
+.sing-back-btn {
+    position: absolute;
+    padding: 8px 20px;
+    border-radius: 10px;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3d5856;
+    border: 2px solid #9cc4c1;
+    color: white;
+    margin-right: 20px;
+    transition-duration: .1s;
+}
+
+/* Sign End */
+
+/* Sign-in Start */
+
+.ck-wrap {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.polisy {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#sign-in-page {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sign-form {
+    box-sizing: border-box;
+    width: min(260px, 95vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-label {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #679290;
+}
+
+.sign-input {
+    padding: 5px;
+    background-color: #DAEEDE;
+    border: 2px solid #679290;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sign-submit-btn {
+    width: fit-content;
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 2px solid #c99e54;
+    background-color: #EEC175;
+    font-size: 16px;
+    color: #3d5856;
+    transition-duration: .1s;
+}
+
+/* Sign-in End */
+
+/* Sign-up Start */
+
+#sign-up-page {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Sign-up End */

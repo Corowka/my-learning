@@ -1,3 +1,0 @@
-﻿  Source.cpp
-C:\Users\kopan\OneDrive\Desktop\АиПОС\Лаб №1 АиПОС с5\client\Source.cpp(87,54): warning C4805: ==: небезопасное смешение типа "bool" и типа "SHORT" в операции
-  client.vcxproj -> C:\Users\kopan\OneDrive\Desktop\АиПОС\Лаб №1 АиПОС с5\client\x64\Debug\client.exe

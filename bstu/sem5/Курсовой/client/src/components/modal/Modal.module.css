@@ -1,0 +1,69 @@
+.bg {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    border-radius: 8px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.modal label {
+    padding-left: 5px;
+}
+
+.modal input {
+    width: min(280px, 80vw);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.btnWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.error {
+    padding: 0 5px;
+    color: red;
+}
+
+.select {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.chosen {
+    border: 1px solid #4096ff;
+    transition-duration: .3;
+}
+
+.list {
+    max-height: 300px;
+    overflow-y: auto;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 5px 0 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.item {
+    width: 100%;
+    margin-bottom: 5px;
+}

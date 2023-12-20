@@ -23,7 +23,7 @@ std::mutex g_lock;
 std::string filename;
 
 void ClientRecvHandler() {
-    char msg[256];
+    char msg[32576];
 
     while (true) {
         int bytesReceived = recvfrom(ClientSocket, msg, sizeof(msg), 0, (SOCKADDR*)&serverAddr, &serverAddrSize);
@@ -55,12 +55,11 @@ void ClientRecvHandler() {
 }
 
 void ClientSendHandler() {
-    char msg[256];
+    char msg[32576];
     while (true) {
         bool HomeKeyState = !GetKeyState(VK_HOME);
         bool isMessageEntered = false;
         bool isCommandDisconect = false;
-        char msg[256];
         while (true) {
             if (!isMessageEntered) {
                 std::cin.getline(msg, sizeof(msg));
@@ -129,7 +128,7 @@ int main(int argc, char* argv[]) {
 
     SOCKADDR_IN clientAddr;
     int sizeofClientAddr = sizeof(clientAddr);
-    clientAddr.sin_addr.s_addr = inet_addr(ClientIP);
+    clientAddr.sin_addr.s_addr = 0;//inet_addr(ClientIP);
     clientAddr.sin_port = htons(ClientPORT);
     clientAddr.sin_family = AF_INET;
 

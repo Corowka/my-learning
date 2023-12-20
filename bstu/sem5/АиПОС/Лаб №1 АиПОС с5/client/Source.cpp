@@ -19,7 +19,7 @@ std::mutex g_lock;
 std::string filename;
 
 void ClientRecvHandler() {
-	char msg[256];
+	char msg[32768];
 	while (true) {
 		recv(Connection, msg, sizeof(msg), NULL);
 		g_lock.lock();
@@ -49,7 +49,7 @@ void ClientSendHandler() {
 	bool HomeKeyState = !GetKeyState(VK_HOME);
 	bool isMessageEntered = false;
 	bool isCommandDisconect = false;
-	char msg[256];
+	char msg[32768];
 	while (true) {
 		if (!isMessageEntered) {
 			std::cin.getline(msg, sizeof(msg));

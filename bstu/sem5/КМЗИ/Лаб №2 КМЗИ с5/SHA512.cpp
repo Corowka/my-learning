@@ -48,13 +48,21 @@ void SHA512::separator(string getBlock) {
 			= rotr(this->Message[g - 2], 19) 
 			^ rotr(this->Message[g - 2], 61) 
 			^ shr(this->Message[g - 2], 6);
+		cout << "WordA" << ' ' << WordA << endl;
 		int64 WordB = this->Message[g - 7];
+		cout << "WordB" << ' ' << WordB << endl;
 		int64 WordC 
 			= rotr(this->Message[g - 15], 1) 
 			^ rotr(this->Message[g - 15], 8) 
 			^ shr(this->Message[g - 15], 7);
+		cout << rotr(this->Message[g - 15], 1) << endl;
+		cout << rotr(this->Message[g - 15], 8) << endl;
+		cout << shr(this->Message[g - 15], 7) << endl;
+		cout << "WordC" << ' ' << WordC << endl;
 		int64 WordD = this->Message[g - 16];
+		cout << "WordD" << ' ' << WordD << endl;
 		int64 T = WordA + WordB + WordC + WordD;
+		cout << "T" << ' ' << T << endl;
 		this->Message[g] = T;
 	}
 }
@@ -114,6 +122,9 @@ string SHA512::hash(string myString) {
 	}
 	for (int letsgo = 0; letsgo < blocksnumber; ++letsgo) {
 		separator(Blocks[letsgo]);
+		for (int i = 0; i < 80; i++) {
+			cout << this->Message[i] << endl;
+		}
 		AA = A; BB = B; CC = C; DD = D; EE = E; FF = F; GG = G; HH = H;
 		int j = 0;
 		for (int i = 0; i < 10; i++) {

@@ -1,9 +1,0 @@
-﻿  АОИС 3.cpp
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\АОИС 3.cpp(8,25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\АОИС 3.cpp(9,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\АОИС 3.cpp(10,25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\АОИС 3.cpp(11,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\АОИС 3.cpp(16,21): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\АОИС 3.cpp(26,29): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\АОИС 3.cpp(27,32): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  АОИС 3.vcxproj -> C:\My Drive\my-learning\bstu\sem4\КМЗИ\АОИС 3\x64\Debug\АОИС 3.exe
