@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Profile Page Start */
+
+#profile-page {
+    display: none;
+}
+
+/* Profile Page End */
+
+/* ToDo Page Start */
+
+#todo {
+    display: none;
+}
+
+/* ToDo Page End */
+
+

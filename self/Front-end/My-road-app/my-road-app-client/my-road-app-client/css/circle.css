@@ -1,0 +1,116 @@
+/* MaksCircle Page Start */
+
+#makscircle-page {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle-wrap {
+    padding: 10px 10px 60px;
+}
+
+.circle {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.catigories-container {
+    width: 100%;
+}
+
+.catigory-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.catigory-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-wrap {
+    width: 80%;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.score {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.stairs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.stairs span {
+    font-weight: bold;
+    color: greenyellow;
+    transform: rotate(90deg);
+    margin-bottom: 5px;
+}
+
+.prev-score {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.catigory-name {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#catigory-0 {
+    background-color: #FF6F61
+}
+
+#catigory-1 {
+    background-color: #6B4226
+}
+
+#catigory-2 {
+    background-color: #FF9A8B
+}
+
+#catigory-3 {
+    background-color: #005A87
+}
+
+#catigory-4 {
+    background-color: #9E2A2B
+}
+
+#catigory-5 {
+    background-color: #F0C987
+}
+
+#catigory-6 {
+    background-color: #006D77
+}
+
+#catigory-7 {
+    background-color: #F18F01
+}
+
+
+/* MaksCircle Page End */

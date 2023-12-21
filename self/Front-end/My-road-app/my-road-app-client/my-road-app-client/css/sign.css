@@ -1,0 +1,161 @@
+/* Sign Start */
+
+#sign-page{
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    background-size: 150% 150%;
+    animation: gradient infinite ease 2s;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    0% {
+        background-position: 0 0;
+    }
+}
+
+.app-name {
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.buttons-wrap {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding-bottom: 40px;
+}
+
+.sign-btn {
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 3px solid white;
+    color: white;
+    font-size: 20px;
+    transition-duration: .1s;
+    background: none;
+}
+
+.line {
+    border-radius: 1px;
+    margin-right: 20px;
+    width: 1px;
+    margin: 0 20px;
+    background-color: white;
+}
+
+.sing-back-btn {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid black;
+    font-size: 20px;
+    margin-right: 20px;
+    transition-duration: .1s;
+}
+
+/* Sign End */
+
+/* Sign-in Start */
+
+#sign-in-page {
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    background-size: 150% 150%;
+    animation: gradient infinite ease 2s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-label {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.sign-input {
+    border: 3px solid white;
+    color: #e66465;
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.sign-buttons-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot {
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    color: white;
+    margin-right: 30px;
+}
+
+.sign-submit-btn {
+    background: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 3px solid white;
+    color: white;
+    font-size: 20px;
+    transition-duration: .1s;
+}
+
+/* Sign-in End */
+
+/* Sign-up Start */
+
+#sign-up-page {
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    background-size: 150% 150%;
+    animation: gradient infinite ease 2s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#sign-up-submit-btn {
+    margin: 0 auto 20px;
+}
+
+/* Sign-up End */

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <link rel="stylesheet" href="./css/pages.css">
+    <link rel="stylesheet" href="./css/todo.css">
+    <link rel="stylesheet" href="./css/circle.css">
+    <title>MyRoadApp</title>
+    <script src="./js/MaksCircleClass.js"></script>
+</head>
+
+<body>
+    
+    <script src="./js/User.js"></script>
+
+    <!-- Sign Page -->
+
+    <div id="sign-page">
+        <button id="test">test</button>
+        <div class="app-name">MyRoadApp</div>
+        <div class="buttons-wrap">
+            <button id="sign-in-btn" class="sign-btn">Sign In</button>
+            <div class="line"></div>
+            <button id="sign-up-btn" class="sign-btn">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Sign in page -->
+
+    <div id="sign-in-page">
+        <form class="sign-form" action="">
+            <label class="sign-label" for="sign-in-email">Email</label>
+            <input id="sign-in-email" type="email" class="sign-input">
+            <label class="sign-label" for="sign-in-password">Password</label>
+            <input id="sign-in-password" type="password" class="sign-input">
+            <div class="sign-buttons-wrap">
+                <button class="forgot">I forgot my password</button>
+                <button id="sign-in-submit-btn" class="sign-submit-btn">Let's Go</button>
+            </div>
+        </form>
+        <button id="sign-in-back" class="sing-back-btn">Back</button>
+    </div>
+
+    <!-- Sign up page -->
+
+    <div id="sign-up-page">
+        <form class="sign-form" action="">
+            <label class="sign-label" for="sign-up-username">Username</label>
+            <input id="sign-up-username" type="text" class="sign-input">
+            <label class="sign-label" for="sign-up-email">Email</label>
+            <input id="sign-up-email" type="email" class="sign-input">
+            <label class="sign-label" for="sign-up-password">Password</label>
+            <input id="sign-up-password" type="password" class="sign-input">
+            <label class="sign-label" for="sign-up-password-repeat">Repeat Password</label>
+            <input id="sign-up-password-repeat" type="password" class="sign-input">
+            <button id="sign-up-submit-btn" class="sign-submit-btn">Create</button>
+        </form>
+        <button id="sign-up-back" class="sing-back-btn">Back</button>
+    </div>
+
+    <!-- Forgor password page -->
+
+    <!-- <div id="forgot-page">
+        <form class="sign-form" action=""></form>
+    </div> -->
+
+    <!-- Menu -->
+
+    <div id="menu">
+        <button id="page-nav-btn-1" class="page-nav-bnt">page1</button>
+        <button id="page-nav-btn-2" class="page-nav-bnt">page2</button>
+        <button id="page-nav-btn-3" class="page-nav-bnt">page3</button>
+    </div>
+
+    <script src="./js/pages.js"></script>
+    <script src="./js/sign.js"></script>
+
+    <!-- Profile Page -->
+
+    <div id="profile-page" class="page">Profile</div>
+
+    <!-- ToDo Page -->
+
+    <div id="todo" class="page">
+        <div class="calendar">
+            <div class="top-bar">
+                <button id="prev-day-btn" class="move-day-btn">day before</button>
+                <button id="toggle-calendar-btn" class="date">00-00-0000</button>
+                <button id="next-day-btn" class="move-day-btn">day after</button>
+            </div>
+            <div class="calendar-menu">
+                <div class="month">Month</div>
+                <div class="calendar-wrap">
+                    <button id="prev-month-btn" class="move-month-btn">&#60;</button>
+                    <div class="calendar-container">
+                        <div class="space"></div>
+                    </div>
+                    <button id="next-month-btn" class="move-month-btn">&#62;</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="progress" class="progress-bg">
+            <div id="progress-value" class="progress-line"></div>
+        </div>
+
+        <div class="todo-wrap">
+            <div class="task-container"></div>
+        </div>
+        <div class="todo-add-wrap">
+            <button id="add-task-btn">+</button>
+            <div class="task-redartor-menu">
+                <button id="remove-task-btn" class="redactor-btn">delete</button>
+                <button id="move-up-task-btn" class="redactor-btn">move up</button>
+                <button id="move-down-task-btn" class="redactor-btn">move down</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/todo.js"></script>
+
+    <!-- MaksCircle Page -->
+
+    <div id="makscircle-page" class="page">
+        <div class="circle-wrap">
+            <img id="mask-circle" class="circle"></img>
+            <div class="catigories-container"></div>
+        </div>
+    </div>
+
+    <script src="./js/circle.js"></script>
+
+</body>
+
+</html>
