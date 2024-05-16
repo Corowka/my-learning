@@ -1,0 +1,83 @@
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.dragArea {
+  max-width: 700px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 8px;
+  color: #fafafa;
+  z-index: 30;
+  background-color: #232323;
+  box-shadow: 5px 5px 10px 5px #00000099;
+  outline: 3px dashed #323232;
+  outline-offset: -30px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.dragArea h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.dragArea p {
+  margin-bottom: 16px;
+}
+
+.fileInputBtn {
+  background-color: #323232;
+  color: #fafafa;
+  border: none;
+  padding: 6px 26px;
+  border-radius: 12px;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 1px 1px 2px 2px #131313;
+  font-size: 20px;
+  padding: 12px 26px;
+}
+
+.fileInputBtn:hover {
+  background-color: #202020;
+  box-shadow: none;
+  box-shadow: inset 1px 1px 1px 1px #131313;
+}
+
+.fileInputBtn:active {
+  background-color: #131313;
+}
+
+
+.dragContent {
+  text-align: center;
+}
+
+.dragContent>p {
+  font-size: 20px;
+  color: #646464;
+}
+
+.fileSection {
+  padding: 60px;
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../public/home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}

@@ -1,0 +1,36 @@
+"filename", "language", "JSON with Comments", "TypeScript", "TypeScript JSX", "CSS", "Markdown", "JSON", "JavaScript", "XML", "comment", "blank", "total"
+"c:\Users\kopan\OneDrive\Desktop\pipes\.eslintrc.json", "JSON with Comments", 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\kopan\OneDrive\Desktop\pipes\README.md", "Markdown", 0, 0, 0, 0, 23, 0, 0, 0, 0, 7, 30
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\Link\Link.tsx", "TypeScript JSX", 0, 0, 21, 0, 0, 0, 0, 0, 0, 7, 28
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\alert\alert.module.css", "CSS", 0, 0, 0, 20, 0, 0, 0, 0, 0, 1, 21
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\alert\alert.tsx", "TypeScript JSX", 0, 0, 16, 0, 0, 0, 0, 0, 0, 4, 20
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\canvas\canvas.module.css", "CSS", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\canvas\canvas.tsx", "TypeScript JSX", 0, 0, 73, 0, 0, 0, 0, 0, 0, 8, 81
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\canvas\utils.ts", "TypeScript", 0, 170, 0, 0, 0, 0, 0, 0, 0, 14, 184
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\file-loader\file-loader.module.css", "CSS", 0, 0, 0, 63, 0, 0, 0, 0, 0, 9, 72
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\file-loader\file-loader.tsx", "TypeScript JSX", 0, 0, 90, 0, 0, 0, 0, 0, 0, 9, 99
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\floor-form\floor-form.module.css", "CSS", 0, 0, 0, 35, 0, 0, 0, 0, 0, 5, 40
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\floor-form\floor-from.tsx", "TypeScript JSX", 0, 0, 75, 0, 0, 0, 0, 0, 0, 4, 79
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\header\header.module.css", "CSS", 0, 0, 0, 43, 0, 0, 0, 0, 0, 5, 48
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\header\header.tsx", "TypeScript JSX", 0, 0, 28, 0, 0, 0, 0, 0, 0, 3, 31
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\loader\loader.module.css", "CSS", 0, 0, 0, 16, 0, 0, 0, 0, 0, 1, 17
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\loader\loader.tsx", "TypeScript JSX", 0, 0, 10, 0, 0, 0, 0, 0, 0, 2, 12
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\manual-modal\manual-modal.module.css", "CSS", 0, 0, 0, 58, 0, 0, 0, 0, 0, 15, 73
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\manual-modal\manual-modal.tsx", "TypeScript JSX", 0, 0, 66, 0, 0, 0, 0, 0, 0, 5, 71
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\manual-modal\manual-step.tsx", "TypeScript JSX", 0, 0, 39, 0, 0, 0, 0, 0, 0, 6, 45
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\toolbar\toolbar.module.css", "CSS", 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 5
+"c:\Users\kopan\OneDrive\Desktop\pipes\components\toolbar\toolbar.tsx", "TypeScript JSX", 0, 0, 9, 0, 0, 0, 0, 0, 0, 5, 14
+"c:\Users\kopan\OneDrive\Desktop\pipes\next.config.mjs", "JavaScript", 0, 0, 0, 0, 0, 0, 4, 0, 1, 2, 7
+"c:\Users\kopan\OneDrive\Desktop\pipes\package-lock.json", "JSON", 0, 0, 0, 0, 0, 9463, 0, 0, 0, 1, 9464
+"c:\Users\kopan\OneDrive\Desktop\pipes\package.json", "JSON", 0, 0, 0, 0, 0, 33, 0, 0, 0, 1, 34
+"c:\Users\kopan\OneDrive\Desktop\pipes\pages\_app.tsx", "TypeScript JSX", 0, 0, 8, 0, 0, 0, 0, 0, 0, 2, 10
+"c:\Users\kopan\OneDrive\Desktop\pipes\pages\api\hello.ts", "TypeScript", 0, 10, 0, 0, 0, 0, 0, 0, 1, 3, 14
+"c:\Users\kopan\OneDrive\Desktop\pipes\pages\index.module.css", "CSS", 0, 0, 0, 18, 0, 0, 0, 0, 0, 2, 20
+"c:\Users\kopan\OneDrive\Desktop\pipes\pages\index.tsx", "TypeScript JSX", 0, 0, 40, 0, 0, 0, 0, 0, 0, 5, 45
+"c:\Users\kopan\OneDrive\Desktop\pipes\public\question.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 6, 1, 5, 12
+"c:\Users\kopan\OneDrive\Desktop\pipes\styles\globals.css", "CSS", 0, 0, 0, 33, 0, 0, 0, 0, 0, 6, 39
+"c:\Users\kopan\OneDrive\Desktop\pipes\tsconfig.json", "JSON with Comments", 22, 0, 0, 0, 0, 0, 0, 0, 0, 1, 23
+"c:\Users\kopan\OneDrive\Desktop\pipes\utils\is-mobile.ts", "TypeScript", 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 7
+"c:\Users\kopan\OneDrive\Desktop\pipes\utils\preparePlanFile.ts", "TypeScript", 0, 11, 0, 0, 0, 0, 0, 0, 0, 1, 12
+"c:\Users\kopan\OneDrive\Desktop\pipes\utils\types.ts", "TypeScript", 0, 17, 0, 0, 0, 0, 0, 0, 0, 3, 20
+"Total", "-", 25, 215, 475, 294, 23, 9496, 4, 6, 3, 143, 10684

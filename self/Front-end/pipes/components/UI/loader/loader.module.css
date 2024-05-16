@@ -1,0 +1,17 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fc640066;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 98;
+}
+
+.loading {
+  font-size: 20px;
+  padding: 12px 6px;
+  background-color: #101010;
+  color: white;
+}

@@ -1,0 +1,25 @@
+.alert {
+  color: white;
+  background-color: #9f0000aa;
+  position: absolute;
+  width: 100%;
+  animation: fadeOut 4s ease-out forwards;
+  border-radius: 0;
+  margin: 0 3px;
+  padding: 16px 26px 16px;
+  font-size: 18px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
