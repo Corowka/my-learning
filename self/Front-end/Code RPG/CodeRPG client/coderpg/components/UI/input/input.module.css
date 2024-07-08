@@ -1,0 +1,25 @@
+.validMessage {
+  color: #2fd62f;
+  font-size: 12px;
+  padding-left: 12px;
+}
+
+.invalidMessage {
+  color: #ff0000;
+  font-size: 12px;
+  padding-left: 12px;
+}
+
+.content {
+  height: 60px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  outline: none;
+  border: none;
+  border: 1px solid #32323232;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}

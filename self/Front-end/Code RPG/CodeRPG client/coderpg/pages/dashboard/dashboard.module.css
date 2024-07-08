@@ -1,0 +1,18 @@
+.wrapper {
+  overflow-y: auto;
+  display: flex;
+}
+
+.columnWrap:first-child {
+  width: calc(100% - 330px);
+  margin-right: 30px;
+}
+
+.columnWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.graphicContent {
+  margin-top: 20px;
+}

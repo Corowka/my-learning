@@ -1,0 +1,21 @@
+.taskItem {
+    display: flex;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.taskItem:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox {
+    padding: 0 8px;
+    transform: scale(2);
+    margin-right: 10px;
+}
+
+.input {
+    margin-right: 10px;
+}

@@ -1,0 +1,27 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, pink, skyblue);
+}
+
+.form {
+  background-color: #fff;
+  width: 320px;
+  padding: 20px 20px 40px;
+  border-radius: 6px;
+}
+
+.content {
+  border-radius: 16px;
+  padding: 20px 20px 30px;
+  background-color: #fff;
+}
+
+.buttonWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

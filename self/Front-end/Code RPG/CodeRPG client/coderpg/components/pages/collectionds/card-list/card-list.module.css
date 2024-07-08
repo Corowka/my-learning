@@ -1,0 +1,22 @@
+.list {
+  width: 100%;
+  height: calc(100% - 80px);
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: #131313;
+}
+
+.content {
+  box-shadow: 0px 0px 14px 100px #13131366 inset;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cardWrap {
+  width: calc((100vw - 280px) / 8 - 1px);
+  height: calc(((100vw - 280px) / 8 - 1px) / 2 * 3 - 10px);
+}
