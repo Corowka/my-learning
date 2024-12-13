@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  text-align: justify;
+  padding: 16px 32px;
+  font-size: 20px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+}
+
+.sentence {
+  margin-right: 12px;
+}
+
+.tag {
+  margin: 12px;
+}
