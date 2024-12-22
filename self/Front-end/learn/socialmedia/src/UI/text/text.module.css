@@ -1,0 +1,18 @@
+.container {
+  cursor: default;
+  font-size: 14px;
+}
+
+.mainContainer {
+  color: #e1e3e6aa;
+}
+
+.extraContainer {
+  color: #e1e3e633;
+}
+
+.errorContainer {
+  color: #aa0000;
+  font-size: 12px;
+}
+

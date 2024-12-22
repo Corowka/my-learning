@@ -1,0 +1,1 @@
+export const cn = (...styles: (string | undefined)[]) => styles.filter(s => s).join(" ")

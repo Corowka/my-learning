@@ -1,0 +1,45 @@
+.container {
+  padding: 15px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  border-radius: 6px;
+  padding: 4px 8px;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background-color: #141414;
+  border: none;
+}
+
+.link:hover {
+  background-color: #222;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.icon > * {
+  fill: #71aaeb;
+}
+
+.name {
+  margin-top: 1px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.line {
+  height: 1px;
+  background-color: #363738;
+  width: 120px;
+  margin-left: 34px;
+  border: none;
+}
