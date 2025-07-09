@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+}
+
+.form {
+  width: min(400px, 100% - 32px);
+  padding: 30px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  background-color: #e6f4ff;
+  gap: 12px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}

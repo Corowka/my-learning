@@ -1,0 +1,28 @@
+-- AlterTable
+ALTER TABLE "ExtraFacultyInfo" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "value" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "ExtraSpecialtyInfo" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "value" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "ExtraUniversityInfo" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "value" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "Faculty" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "description" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "Specialty" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "description" DROP NOT NULL,
+ALTER COLUMN "employment" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "University" ALTER COLUMN "latitude" DROP NOT NULL,
+ALTER COLUMN "longitude" DROP NOT NULL,
+ALTER COLUMN "siteLink" DROP NOT NULL,
+ALTER COLUMN "numberOfStudents" DROP NOT NULL,
+ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "description" DROP NOT NULL;

@@ -1,0 +1,173 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String          @id @default(cuid())
+  name          String?
+  email         String          @unique
+  password      String?
+  emailVerified DateTime?
+  image         String?
+  role          String?
+  accounts      Account[]
+  sessions      Session[]
+  Authenticator Authenticator[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  student    Student?
+  university University?
+}
+
+model Student {
+  id          String  @id @default(cuid())
+  firstName   String?
+  secondName  String?
+  thirdName   String?
+  yearOfBirth Int?
+
+  tests  Test[]
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String? @unique
+}
+
+model University {
+  id               String                @id @default(cuid())
+  latitude         Float?
+  longitude        Float?
+  siteLink         String?
+  images           String[]
+  numberOfStudents Int?
+  approved         DateTime?
+  name             String?
+  description      String?
+  extraInfo        ExtraUniversityInfo[]
+  faculties        Faculty[]
+  user             User?                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId           String?               @unique
+}
+
+model Faculty {
+  id               String             @id @default(cuid())
+  name             String?
+  areasOfKnowledge String[]
+  description      String?
+  extraInfo        ExtraFacultyInfo[]
+  specialties      Specialty[]
+
+  universityId String
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+}
+
+model Specialty {
+  id          String               @id @default(cuid())
+  name        String?
+  description String?
+  employment  String?
+  extraInfo   ExtraSpecialtyInfo[]
+
+  facultyId String
+  faculty   Faculty @relation(fields: [facultyId], references: [id], onDelete: Cascade)
+  test      Test[]
+}
+
+model Test {
+  id        String   @id @default(cuid())
+  benefits  Int[]
+  skills    Int[]
+  questions String[]
+  llmSkills Int[]
+  passDate  DateTime
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  specialtyId String?
+  specialty   Specialty? @relation(fields: [specialtyId], references: [id], onDelete: Cascade)
+}
+
+model ExtraUniversityInfo {
+  id           String     @id @default(cuid())
+  name         String?
+  value        String?
+  universityId String
+  university   University @relation(fields: [universityId], references: [id], onDelete: Cascade)
+}
+
+model ExtraFacultyInfo {
+  id        String  @id @default(cuid())
+  name      String?
+  value     String?
+  facultyId String
+  faculty   Faculty @relation(fields: [facultyId], references: [id], onDelete: Cascade)
+}
+
+model ExtraSpecialtyInfo {
+  id          String    @id @default(cuid())
+  name        String?
+  value       String?
+  specialtyId String
+  specialty   Specialty @relation(fields: [specialtyId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([provider, providerAccountId])
+}
+
+model Session {
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@id([identifier, token])
+}
+
+// Optional for WebAuthn support
+model Authenticator {
+  credentialID         String  @unique
+  userId               String
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, credentialID])
+}

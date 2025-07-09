@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 0 32px;
+}
+
+.autocomplete {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  padding-bottom: 12px;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 16px 32px;
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: calc(100% - 32px) !important;
+    margin: 0 16px !important;
+  }
+}

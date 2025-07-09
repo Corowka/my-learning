@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form {
+  padding: 16px 0;
+}

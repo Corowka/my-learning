@@ -1,0 +1,39 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 48px;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+}
+
+.tabLabel {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

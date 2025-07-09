@@ -1,0 +1,1 @@
+export const hex2num = (hex: string): number => parseInt(hex.slice(1), 16)

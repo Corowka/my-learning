@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .text {
+    height: 72px;
+    display: flex;
+    align-items: center;
+  }
+
+  .text * {
+    width: calc(100% - 30px);
+  }
+}
